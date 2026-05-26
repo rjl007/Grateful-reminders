@@ -3,8 +3,8 @@
   "short_name": "Gratitude",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#f5efe2",
-  "theme_color": "#006d83",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
   "icons": [
     {
       "src": "icon.svg",
