@@ -1,0 +1,16 @@
+{
+  "name": "Grateful Reminders",
+  "short_name": "Gratitude",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5efe2",
+  "theme_color": "#006d83",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

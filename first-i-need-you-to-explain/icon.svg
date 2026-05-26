@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="Surf gratitude icon">
+  <rect width="192" height="192" rx="18" fill="#f5efe2"/>
+  <circle cx="58" cy="54" r="26" fill="#ffc94d"/>
+  <path d="M0 105c32-21 64-21 96 0s64 21 96 0v87H0z" fill="#006d83"/>
+  <path d="M0 128c34-18 66-17 96 2 29 18 61 20 96 1v61H0z" fill="#064758"/>
+  <path d="M52 120c31-3 59 8 84 32" fill="none" stroke="#efffff" stroke-width="14" stroke-linecap="round"/>
+  <path d="M71 111l68 22" stroke="#e46d4f" stroke-width="12" stroke-linecap="round"/>
+</svg>

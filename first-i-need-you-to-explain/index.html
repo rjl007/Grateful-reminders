@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#006d83">
+    <title>Grateful Reminders</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="app-title">
+        <div class="hero-art" aria-hidden="true">
+          <svg class="beach-scene" viewBox="0 0 520 330" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="#6fcbd8"/>
+                <stop offset="0.62" stop-color="#d8f8f6"/>
+                <stop offset="1" stop-color="#ffe0a0"/>
+              </linearGradient>
+              <linearGradient id="waveBlue" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#17a7b6"/>
+                <stop offset="0.58" stop-color="#006d83"/>
+                <stop offset="1" stop-color="#064758"/>
+              </linearGradient>
+            </defs>
+
+            <rect width="520" height="330" fill="url(#sky)"/>
+            <circle cx="390" cy="72" r="48" fill="#ffc94d"/>
+            <circle cx="390" cy="72" r="68" fill="#ffc94d" opacity="0.18"/>
+
+            <rect y="155" width="520" height="88" fill="#0d8da1"/>
+            <path d="M0 170 C90 148 168 148 252 170 S424 192 520 164 L520 242 L0 242 Z" fill="#2bb8c3" opacity="0.72"/>
+
+            <path d="M138 238 C188 132 302 114 367 172 C395 197 394 235 360 254 C326 273 282 256 282 222 C282 194 309 180 335 188 C291 135 201 156 166 246 Z" fill="url(#waveBlue)"/>
+            <path d="M165 211 C210 149 285 142 334 187 C302 177 269 190 254 218 C236 250 199 247 166 226 Z" fill="#efffff"/>
+            <path d="M257 219 C278 186 310 177 344 194 C324 196 304 206 291 226 C282 239 268 238 257 219 Z" fill="#bff4f2"/>
+            <path d="M44 229 C114 204 174 203 244 229 S386 253 520 224 L520 330 L0 330 L0 242 Z" fill="#e6c886"/>
+            <path d="M0 262 C92 246 174 248 254 264 S420 280 520 258" fill="none" stroke="#caa965" stroke-width="3" opacity="0.55"/>
+            <path d="M30 292 C122 276 194 280 282 294 S438 306 520 290" fill="none" stroke="#caa965" stroke-width="3" opacity="0.45"/>
+
+            <path d="M70 250 L112 86" stroke="#8a542f" stroke-width="22" stroke-linecap="square"/>
+            <path d="M83 250 L124 87" stroke="#c27a3f" stroke-width="8" stroke-linecap="square" opacity="0.72"/>
+            <ellipse cx="119" cy="86" rx="74" ry="20" fill="#24735b" transform="rotate(-28 119 86)"/>
+            <ellipse cx="119" cy="86" rx="72" ry="19" fill="#2f8668" transform="rotate(16 119 86)"/>
+            <ellipse cx="119" cy="86" rx="62" ry="18" fill="#1f634f" transform="rotate(62 119 86)"/>
+            <ellipse cx="119" cy="86" rx="62" ry="18" fill="#2b7b61" transform="rotate(156 119 86)"/>
+          </svg>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Surf check for your soul</p>
+          <h1 id="app-title">Grateful Reminders</h1>
+          <p>Save what keeps you steady, then let the app send three random gratitude waves through your day.</p>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="add-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your list</p>
+            <h2 id="add-title">What are you grateful for?</h2>
+          </div>
+          <span class="counter" id="gratitude-count">0 saved</span>
+        </div>
+
+        <form class="add-form" id="gratitude-form">
+          <label for="gratitude-input">Add something meaningful</label>
+          <div class="input-row">
+            <input id="gratitude-input" name="gratitude" type="text" autocomplete="off" placeholder="Example: the people who check on me">
+          </div>
+          <button type="submit">Add</button>
+        </form>
+
+        <div class="empty-state" id="empty-state">
+          <strong>Your list is waiting.</strong>
+          <span>Add a few people, places, moments, or answered prayers you want to remember.</span>
+        </div>
+
+        <ul class="gratitude-list" id="gratitude-list" aria-label="Saved gratitude list"></ul>
+      </section>
+
+      <section class="panel" aria-labelledby="reminder-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Reminders</p>
+            <h2 id="reminder-title">Three random times today</h2>
+          </div>
+          <button class="ghost-button" id="test-reminder" type="button">Test now</button>
+        </div>
+
+        <div class="reminder-controls">
+          <label>
+            Start
+            <input id="start-time" type="time" value="09:00">
+          </label>
+          <label>
+            End
+            <input id="end-time" type="time" value="21:00">
+          </label>
+          <button id="schedule-reminders" type="button">Schedule today</button>
+        </div>
+
+        <div class="notice" id="permission-notice">
+          Turn on notifications so this app can remind you. On phones, keep the web app installed or open for the most reliable reminders.
+        </div>
+
+        <div class="notification-preview" id="notification-preview" hidden aria-live="polite"></div>
+        <div class="schedule" id="schedule" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
